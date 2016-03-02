@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Swift enums for JSON parsing
-excerpt: When your JSON contains string fields that can only contain a limited set of values, Swift enums and their ability to have String raw types can be very handy.
-categories: swift enum json
+category: swift
+
 ---
 
 I discovered Swift since some time now, and even if I haven't really used it in a production app yet, I really love playing around with it.

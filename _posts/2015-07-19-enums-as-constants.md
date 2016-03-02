@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Enums as constants
-excerpt: Use enums as constants for your images, colors, storyboards, and more… and make your code beautiful (and short, and with autocompletion, and error-free)
-categories: swift enum constants
+categories: swift
 ---
 
 Swift enums are way more powerful than C/ObjC enums. For example, they are not limited to be mapped to Ints like in C but can also be e.g. Strings. And they also can contain methods inside them, quite like classes and struct.
@@ -98,7 +97,7 @@ extension UIColor {
     let green = CGFloat((rgbaValue >> 16) & 0xff) / 255.0
     let blue  = CGFloat((rgbaValue >>  8) & 0xff) / 255.0
     let alpha = CGFloat((rgbaValue      ) & 0xff) / 255.0
-    
+
     self.init(red: red, green: green, blue: blue, alpha: alpha)
   }
 }
