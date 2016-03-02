@@ -14,6 +14,22 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
+              {% if page.url == 'https://github.com/oenius' %}
+                <li class="active">
+              {% else %}
+                <li>
+              {% endif %}
+                  <a href="https://github.com/oenius">Github</a>
+                </li>
+
+              {% if page.url == 'http://115.29.76.128:8081/' %}
+                <li class="active">
+              {% else %}
+                <li>
+              {% endif %}
+                  <a href="http://115.29.76.128:8081/">Gitlab</a>
+                </li>
+
               {% if page.url == '/blog.html' %}
                 <li class="active">
               {% else %}
