@@ -9,7 +9,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Jarvis 工作室</title>
+    <title>
+      {% if page.title %}
+      {{ page.title }}
+      {% else %}
+      Jarvis 工作室
+      {% endif %}
+  </title>
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -70,7 +76,7 @@
         </div>
         <!-- /.container-fluid -->
     </nav>
-    {{ content }} 
+    {{ content }}
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
