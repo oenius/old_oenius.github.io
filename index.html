@@ -4,198 +4,113 @@ title: Jarvis 工作室
 
 ---
 
-<header>
-        <div class="header-content">
+    <header>
+        <!-- <div class="header-content">
             <div class="header-content-inner">
                 <h1>为iOS社区带来最佳实践和先进技术</h1>
                 <hr>
                 <p>@Jarvis 工作室</p>
-                <a href="http://115.29.76.128:8081/" class="btn btn-primary btn-xl page-scroll">一起协作，加入Jarvis的Gitlab</a>
+                <a href="#" class="btn btn-primary btn-xl page-scroll">下载Jarvis客户端</a>
             </div>
-        </div>
-    </header>
+        </div> -->
+      </header>
 
 
 
-    <section class="bg-primary" id="about">
+
+      <section>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Hacker</h2>
-                    <hr class="light">
-                    <p class="text-faded">需要review代码，随时@我们</p>
-                    <p class="text-faded">@周宇 @范航 @魏莉 @李晨涛 @王存志</p>
-                    <a href="http://forum.jarvis.studio/" class="btn btn-default btn-xl">交流技术，获取最佳实践</a>
-                </div>
-            </div>
-        </div>
-    </section>
+          <h5>Objctive-C</h5>
+          <div class="row">
+            <div class="text-left">
+              {% for category in site.categories %}
+              <!-- <h2>{{ category.first }}</h2> -->
+              <!-- </span>{{ category | last | size }}</span> -->
 
-    <section id="services">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">总有你想知道的</h2>
-                    <hr class="primary">
-                </div>
+                <ul class="arc-list">
+                  {% if category.first == 'swift' %}
+                  {% for post in category.last %}
+                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+                {% endfor %}
             </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
-                        <h3>Objective-C</h3>
-                        <p class="text-muted">永远的开始.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
-                        <h3>Swift</h3>
-                        <p class="text-muted">更快, 更安全. </p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
-                        <h3>React Native</h3>
-                        <p class="text-muted">打破僵局,让热更新不再困难.</p>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 text-center">
-                    <div class="service-box">
-                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
-                        <h3>视觉</h3>
-                        <p class="text-muted">增加你的技术树,做一名合格的设计师</p>
-                    </div>
-                </div>
+          </div>
+          <h5>Swift</h5>
+          <div class="row">
+            <div class="text-left">
+              {% for category in site.categories %}
+              <!-- <h2>{{ category.first }}</h2> -->
+              <!-- </span>{{ category | last | size }}</span> -->
+                <ul class="arc-list">
+                  {% if category.first == 'swift' %}
+                  {% for post in category.last %}
+                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+                {% endfor %}
             </div>
-        </div>
-    </section>
+          </div>
 
-    <section class="no-padding" id="portfolio">
-        <div class="container-fluid">
-            <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="#" class="portfolio-box">
-                        <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Category
-                                </div>
-                                <div class="project-name">
-                                    Project Name
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+          <h5>React Native</h5>
+          <div class="row">
+            <div class="text-left">
+              {% for category in site.categories %}
+              <!-- <h2>{{ category.first }}</h2> -->
+              <!-- </span>{{ category | last | size }}</span> -->
+                <ul class="arc-list">
+                  {% if category.first == 'swift' %}
+                  {% for post in category.last %}
+                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+                {% endfor %}
             </div>
+          </div>
+
         </div>
-    </section>
+
+
+
+      </section>
+      <section id="contact">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-8 col-lg-offset-2 text-center">
+                      <h2 class="section-heading">Jarvis 工作室</h2>
+                      <hr class="primary">
+                      <p>
+                        <a href="http://weibo.com/2616041127">@周宇</a>
+                        <a href="http://weibo.com/2616041127">@魏莉</a>
+                        <a href="http://weibo.com/2616041127">@范航</a>
+                        <a href="http://weibo.com/2616041127">@李晨涛</a>
+                        <a href="http://weibo.com/2616041127">@王存志</a>
+                      </p>
+                      <p>欢迎任何有意思的人，和有意思的想法。有任何反馈请联系我们。</p>
+                  </div>
+                  <div class="col-lg-4 col-lg-offset-2 text-center">
+                      <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                      <p>+86-18605055717</p>
+                  </div>
+                  <div class="col-lg-4 text-center">
+                      <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                      <p><a href="mailto:jarvis@jarvis.studio">jarvis@javis.studio</a></p>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
 
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
-                <h2>更多项目</h2>
-                <a href="#" class="btn btn-default btn-xl wow tada">去AppStore体验</a>
+                <h2>JARVIS STUDIO</h2>
+                <p>Questions? Corrections? <a href="http://weibo.com/taligent">@JARVIS_STUDIO</a> or on <a href="https://github.com/oenius">@GitHub</a>.</p>
+                <p>JARVIS.studio is released under a Creative Commons BY-NC License.</p>
             </div>
         </div>
     </aside>
-
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <h2 class="section-heading">Jarvis 工作室</h2>
-                    <hr class="primary">
-                    <p>欢迎任何有意思的人，和有意思的想法。有任何反馈请联系我们。</p>
-                </div>
-                <div class="col-lg-4 col-lg-offset-2 text-center">
-                    <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                    <p>+86-18605055717</p>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                    <p><a href="mailto:jarvis@jarvis.studio">jarvis@jarvis.studio</a></p>
-                </div>
-            </div>
-        </div>
-    </section>
