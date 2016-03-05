@@ -5,41 +5,63 @@ title: Jarvis 工作室
 ---
 
     <header>
-        <!-- <div class="header-content">
-            <div class="header-content-inner">
+        <div class="header-content">
+            <!-- <div class="header-content-inner">
                 <h1>为iOS社区带来最佳实践和先进技术</h1>
                 <hr>
                 <p>@Jarvis 工作室</p>
                 <a href="#" class="btn btn-primary btn-xl page-scroll">下载Jarvis客户端</a>
-            </div>
-        </div> -->
+            </div> -->
+        </div>
       </header>
 
+      <section id="book">
+          <div class="container">
+
+              <div class="row" style="margin-top:50px;">
+                  <div class="col-lg-8 col-lg-offset-0 text-left">
+                      <p style="font-size: 15px;">最近...</p>
+                      <h2 class="section-heading">Jarvis GitHub 推进了项目</h2>
+                      <div >
+                        With 2015 behind us and the new year begun, it’s time again for an NSHipster tradition: reader submissions! As in year’s past, this installment is chock full of tips and tricks that can help ease your days working with Xcode, Swift, and Objective-C.
+                      </div>
+                      <a href="https://github.com/Jarvis-Studio">感兴趣，了解更多</a>
+                  </div>
+              </div>
+
+              <div class="row" style="margin-top:50px;">
+                  <div class="col-lg-8 col-lg-offset-0 text-left">
+                      <h2 class="section-heading">赠送图书</h2>
+
+                  </div>
+              </div>
+
+              <p style="font-size: 10px;">从关注并转发<a href="http://weibo.com/taligent">@JARVIS_STUDIO</a>微博的人中，随机抽取。</p>
+          </div>
+      </section>
 
 
 
       <section>
         <div class="container">
-          <h5>Objctive-C</h5>
-          <div class="row">
-            <div class="text-left">
+          <div class="col-lg-3  col-lg-offset-0 text-left">
+            <h5>Objctive-C</h5>
+            <div >
               {% for category in site.categories %}
               <!-- <h2>{{ category.first }}</h2> -->
               <!-- </span>{{ category | last | size }}</span> -->
+                <ul class="arc-list">
+                  {% if category.first == 'swift' %}
+                  {% for post in category.last %}
+                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+                {% endfor %}
+            </div>
 
-                <ul class="arc-list">
-                  {% if category.first == 'swift' %}
-                  {% for post in category.last %}
-                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
-                  {% endfor %}
-                  {% endif %}
-                </ul>
-                {% endfor %}
-            </div>
-          </div>
-          <h5>Swift</h5>
-          <div class="row">
-            <div class="text-left">
+            <h5>Cocoa</h5>
+            <div >
               {% for category in site.categories %}
               <!-- <h2>{{ category.first }}</h2> -->
               <!-- </span>{{ category | last | size }}</span> -->
@@ -52,30 +74,97 @@ title: Jarvis 工作室
                 </ul>
                 {% endfor %}
             </div>
+
+            <h5>Tools</h5>
+            <div >
+              {% for category in site.categories %}
+              <!-- <h2>{{ category.first }}</h2> -->
+              <!-- </span>{{ category | last | size }}</span> -->
+                <ul class="arc-list">
+                  {% if category.first == 'swift' %}
+                  {% for post in category.last %}
+                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                  {% endfor %}
+                  {% endif %}
+                </ul>
+                {% endfor %}
+            </div>
+
+          </div>
+          <div class="col-lg-3 col-lg-offset-1 text-left">
+            <h5>Swift</h5>
+
+              <div class="text-left">
+                {% for category in site.categories %}
+                <!-- <h2>{{ category.first }}</h2> -->
+                <!-- </span>{{ category | last | size }}</span> -->
+                  <ul class="arc-list">
+                    {% if category.first == 'swift' %}
+                    {% for post in category.last %}
+                      <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                  </ul>
+                  {% endfor %}
+              </div>
+
+              <h5>Open Source</h5>
+              <div >
+                {% for category in site.categories %}
+                <!-- <h2>{{ category.first }}</h2> -->
+                <!-- </span>{{ category | last | size }}</span> -->
+
+                  <ul class="arc-list">
+                    {% if category.first == 'swift' %}
+                    {% for post in category.last %}
+                        <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                  </ul>
+                  {% endfor %}
+              </div>
+
           </div>
 
-          <h5>React Native</h5>
-          <div class="row">
-            <div class="text-left">
-              {% for category in site.categories %}
-              <!-- <h2>{{ category.first }}</h2> -->
-              <!-- </span>{{ category | last | size }}</span> -->
-                <ul class="arc-list">
-                  {% if category.first == 'swift' %}
-                  {% for post in category.last %}
-                    <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+          <div class="col-lg-3 col-lg-offset-1 text-left">
+            <h5>React Native</h5>
+
+              <div class="text-left">
+                {% for category in site.categories %}
+                <!-- <h2>{{ category.first }}</h2> -->
+                <!-- </span>{{ category | last | size }}</span> -->
+                  <ul class="arc-list">
+                    {% if category.first == 'swift' %}
+                    {% for post in category.last %}
+                      <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                  </ul>
                   {% endfor %}
-                  {% endif %}
-                </ul>
-                {% endfor %}
-            </div>
+              </div>
+              <div style="top=20px,height = 100px;"></div>
+              <h5>Sessions</h5>
+              <div >
+                {% for category in site.categories %}
+                <!-- <h2>{{ category.first }}</h2> -->
+                <!-- </span>{{ category | last | size }}</span> -->
+
+                  <ul class="arc-list">
+                    {% if category.first == 'swift' %}
+                    {% for post in category.last %}
+                        <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
+                    {% endfor %}
+                    {% endif %}
+                  </ul>
+                  {% endfor %}
+              </div>
+
           </div>
+
 
         </div>
-
-
-
       </section>
+
       <section id="contact">
           <div class="container">
               <div class="row">
@@ -89,7 +178,7 @@ title: Jarvis 工作室
                         <a href="http://weibo.com/2616041127">@李晨涛</a>
                         <a href="http://weibo.com/2616041127">@王存志</a>
                       </p>
-                      <p>欢迎任何有意思的人，和有意思的想法。有任何反馈请联系我们。</p>
+                      <p>有疑问，想分享？！联系我们。</p>
                   </div>
                   <div class="col-lg-4 col-lg-offset-2 text-center">
                       <i class="fa fa-phone fa-3x wow bounceIn"></i>
@@ -109,7 +198,7 @@ title: Jarvis 工作室
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>JARVIS STUDIO</h2>
-                <p>Questions? Corrections? <a href="http://weibo.com/taligent">@JARVIS_STUDIO</a> or on <a href="https://github.com/oenius">@GitHub</a>.</p>
+                <p>Questions? Corrections? <a href="http://weibo.com/taligent">@JARVIS_STUDIO</a> or on <a href="https://github.com/Jarvis-Studio">@GitHub</a>.</p>
                 <p>JARVIS.studio is released under a Creative Commons BY-NC License.</p>
             </div>
         </div>
