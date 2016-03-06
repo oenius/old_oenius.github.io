@@ -20,13 +20,25 @@ title: Jarvis 工作室
 
               <div class="row">
                   <div class="col-lg-8 col-lg-offset-0 text-left">
-                      <p style="font-size: 15px;">最近...</p>
-                      <h2 class="section-heading">Jarvis GitHub 推进了项目</h2>
+                      <h5 style="font-size: 15px;">最近动态</h5>
                       <br/>
-                      <div >
-                        With 2015 behind us and the new year begun, it’s time again for an NSHipster tradition: reader submissions! As in year’s past, this installment is chock full of tips and tricks that can help ease your days working with Xcode, Swift, and Objective-C.
-                      </div>
-                      <a href="https://github.com/Jarvis-Studio">感兴趣，了解更多</a>
+                      {% for category in site.categories %}
+                      <!-- <h2>{{ category.first }}</h2> -->
+                      <!-- </span>{{ category | last | size }}</span> -->
+
+                          {% if category.first == 'latest' %}
+                          {% for post in category.last %}
+                          <h2 class="section-heading">{{ post.title }}</h2>
+                          <br/>
+                          <div >
+                            {{ post.excerpt }}
+                          </div>
+                          <a href="{{ post.url }}">感兴趣，了解更多</a>
+                          {% endfor %}
+                          {% endif %}
+                        {% endfor %}
+
+
                   </div>
               </div>
 
@@ -37,11 +49,9 @@ title: Jarvis 工作室
                   </div>
               </div>
               <br/>
-              <p style="font-size: 10px;">从关注并转发<a href="http://weibo.com/taligent">@JARVIS_STUDIO</a>微博的人中，随机抽取。</p>
-              <p style="font-size: 10px;">订阅简书<a href="http://www.jianshu.com/users/7720f38d3719/timeline">@JARVIS_STUDIO</a>的简书</p>
+              <p style="font-size: 10px;">送书活动会从关注并转发<a href="http://weibo.com/taligent">@JARVIS_STUDIO</a>微博，和订阅简书<a href="http://www.jianshu.com/users/7720f38d3719/timeline">@JARVIS_STUDIO</a>的简书的人中，随机抽取。</p>
               <p style="font-size: 10px;">支持JARVIS_STUDIO，并分享到：</p>
               <div class="bdsharebuttonbox"  data-tag="share_1">
-
                 <a class="bds_tsina" style="background-image: none;" data-cmd="tsina" href="#"> @微博</a>
                 <a class="bds_weixin" style="background-image: none;" data-cmd="weixin">@微信</a>
                 <a class="bds_douban" style="background-image: none;" data-cmd="douban">@豆瓣</a>
@@ -52,18 +62,13 @@ title: Jarvis 工作室
               <script>
                 window._bd_share_config = {
                   common : {
-                    bdText : '自定义分享内容',
-                    bdDesc : '自定义分享摘要',
-                    bdUrl : '自定义分享url地址',
-                    bdPic : '自定义分享图片'
+                    bdText : '#JARVIS_STUDIO# 了解有关苹果开发者的Hacker组织 @JARVIS_STUDIO 的更多动态，关注博客。',
+                    bdDesc : '苹果开发者的专属博客',
+                    bdUrl : 'http://www.jarvis.studio',
+                    bdPic : 'http://forum.jarvis.studio/letter_avatar_proxy/v2/letter/j/e36b37/64.png'
                   },
                   share : [{
                     "bdSize" : 16
-                  }],
-                  slide : [{
-                    bdImg : 0,
-                    bdPos : "right",
-                    bdTop : 100
                   }],
                   image : [{
                     viewType : 'list',
@@ -71,9 +76,6 @@ title: Jarvis 工作室
                     viewColor : 'black',
                     viewSize : '16',
                     viewList : ['qzone','tsina','huaban','tqq','renren']
-                  }],
-                  selectShare : [{
-                    "bdselectMiniList" : ['qzone','tqq','kaixin001','bdxc','tqf']
                   }]
                 }
                 with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?cdnversion='+~(-new Date()/36e5)];
@@ -93,7 +95,7 @@ title: Jarvis 工作室
               <!-- <h2>{{ category.first }}</h2> -->
               <!-- </span>{{ category | last | size }}</span> -->
                 <ul class="arc-list">
-                  {% if category.first == 'swift' %}
+                  {% if category.first == 'objc' %}
                   {% for post in category.last %}
                     <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
                   {% endfor %}
@@ -102,13 +104,14 @@ title: Jarvis 工作室
                 {% endfor %}
             </div>
 
+            <br/>
             <h5>Cocoa</h5>
             <div >
               {% for category in site.categories %}
               <!-- <h2>{{ category.first }}</h2> -->
               <!-- </span>{{ category | last | size }}</span> -->
                 <ul class="arc-list">
-                  {% if category.first == 'swift' %}
+                  {% if category.first == 'cocoa' %}
                   {% for post in category.last %}
                     <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
                   {% endfor %}
@@ -117,13 +120,14 @@ title: Jarvis 工作室
                 {% endfor %}
             </div>
 
+            <br/>
             <h5>Tools</h5>
             <div >
               {% for category in site.categories %}
               <!-- <h2>{{ category.first }}</h2> -->
               <!-- </span>{{ category | last | size }}</span> -->
                 <ul class="arc-list">
-                  {% if category.first == 'swift' %}
+                  {% if category.first == 'tools' %}
                   {% for post in category.last %}
                     <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
                   {% endfor %}
@@ -150,6 +154,7 @@ title: Jarvis 工作室
                   {% endfor %}
               </div>
 
+              <br/>
               <h5>Open Source</h5>
               <div >
                 {% for category in site.categories %}
@@ -157,7 +162,7 @@ title: Jarvis 工作室
                 <!-- </span>{{ category | last | size }}</span> -->
 
                   <ul class="arc-list">
-                    {% if category.first == 'swift' %}
+                    {% if category.first == 'open source' %}
                     {% for post in category.last %}
                         <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
@@ -176,7 +181,7 @@ title: Jarvis 工作室
                 <!-- <h2>{{ category.first }}</h2> -->
                 <!-- </span>{{ category | last | size }}</span> -->
                   <ul class="arc-list">
-                    {% if category.first == 'swift' %}
+                    {% if category.first == 'react' %}
                     {% for post in category.last %}
                       <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
@@ -184,7 +189,8 @@ title: Jarvis 工作室
                   </ul>
                   {% endfor %}
               </div>
-              <div style="top=20px,height = 100px;"></div>
+
+              <br/>
               <h5>Sessions</h5>
               <div >
                 {% for category in site.categories %}
@@ -192,7 +198,7 @@ title: Jarvis 工作室
                 <!-- </span>{{ category | last | size }}</span> -->
 
                   <ul class="arc-list">
-                    {% if category.first == 'swift' %}
+                    {% if category.first == 'sessions' %}
                     {% for post in category.last %}
                         <li>{{ post.date | date:"%d/%m/%Y"}}<a href="{{ post.url }}">{{ post.title }}</a></li>
                     {% endfor %}
