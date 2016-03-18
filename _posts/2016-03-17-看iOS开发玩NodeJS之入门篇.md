@@ -94,7 +94,9 @@ nvm use 5.0
 因为Node.js帮助我们实现了整个HTTP服务器。所以为了run 这个server并不需要类如Apache 或者 Nginx 的HTTP 服务器。
 
 打开终端，运行代码
-```
+
+```  
+
 node server.js
 Server running at http://127.0.0.1:8081/
 
