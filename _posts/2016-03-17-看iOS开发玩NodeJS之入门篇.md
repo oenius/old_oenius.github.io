@@ -19,12 +19,48 @@ categories: tools
 > Node.js 是js的服务器端应用。 在 游戏服务器，RESTFul api的方面 都有很好的表现， 当然Node.js的应用场景不限于这些。
 > 我的理解，学语言就像开始一段恋爱，有的无法自拔，有的情深缘浅。而我与Node.js更有种相见恨晚的感觉。
 
+## 目标：搭建 RESTFul Api
+
+开了一个脑洞， 总要做点东西。 一步一步为我们的app搭建一个RESTFul Api。
 
 ## ECMAScript 2015 (ES6) in Node.js
 
-WTF， 不是说好Javascript吗？！
+ES6 ？ 对的， 2015年6月发布的，下一代Javascript 的新标准。
+从Node 4.0 对ES6的支持度越来越高，大部分特性都已经支持。
 
-更多教程 [ECMAScript 6简介](http://es6.ruanyifeng.com/#docs/intro)
+[查看有关ES6的支持情况](http://kangax.github.io/compat-table/es6/)
+
+```
+
+Node.js is built against modern versions of V8.
+
+```
+
+* Block scoping
+  * let (strict mode only)
+  * const
+  * function-in-blocks (strict mode only [1])
+* Classes (strict mode only)
+* Collections
+* Map
+* WeakMap
+* Set
+* WeakSet
+* Typed arrays
+* Generators
+* Binary and Octal literals
+* Object literal extensions (shorthand properties and methods)
+* Promises
+* New String methods
+* Symbols
+* Template strings
+* Arrow Functions
+* new.target [2]
+* Object.assign
+* Spread operator [2]
+
+所以进入Node.js之前， 有必要了解ES6的基本特性。
+更多ES6教程 [ECMAScript 6简介](http://es6.ruanyifeng.com/#docs/intro)
 
 ## 安装NVM (Node version manager)
 像Ruby 的RVM (Ruby version manager) 一样, 给Node安装一个版本管理器.
