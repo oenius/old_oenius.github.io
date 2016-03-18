@@ -40,11 +40,46 @@ WTF， 不是说好Javascript吗？！
 
 更多文档 [GitHub](https://github.com/creationix/nvm/blob/master/README.markdown)
 
+## 安装Node
+
+```
+nvm install node
+
+```
+
+安装指定版本
+
+```
+
+nvm install 5.0
+
+```
+
+查看安装版本
+
+```
+
+nvm ls
+
+```
+
+使用指定版本
+
+```
+
+nvm use 5.0
+
+```
+
+
+
 ## Let's say "Hello world"
 
 抛去差异性较大的环境配置。假设已经安装好了Node.js。
 
-```
+创建文件server.js
+
+``` server.js
   var http = require('http');
 
    http.createServer(function (request, response){
@@ -52,6 +87,21 @@ WTF， 不是说好Javascript吗？！
        response.end('Hello World');
    }).listen(8081);
 
-   console.log('Server running at 127.0.0.1:8888');
+   console.log('Server running at 127.0.0.1:8081');
 
 ```
+
+因为Node.js帮助我们实现了整个HTTP服务器。所以为了run 这个server并不需要类如Apache 或者 Nginx 的HTTP 服务器。
+
+打开终端，运行代码
+```
+node server.js
+Server running at http://127.0.0.1:8081/
+
+```
+
+## REPL(交互式解释器)
+
+在终端的交互解释器， 在帮助入门上有很大的帮助。使用上，和python, ruby,swift没有特别的地方。
+
+ctrl + c两次 退出REPL
