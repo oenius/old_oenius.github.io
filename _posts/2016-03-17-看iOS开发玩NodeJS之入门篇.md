@@ -18,19 +18,27 @@ categories: tools
 
 ## ECMAScript 2015 (ES6) in Node.js
 
+WTF， 不是说好Javascript吗？！
+
+更多教程 [ECMAScript 6简介](http://es6.ruanyifeng.com/#docs/intro)
 
 ## 安装NVM (Node version manager)
-像RVM (Ruby version manager) 一样, 给Node安装一个版本管理器.
+像Ruby 的RVM (Ruby version manager) 一样, 给Node安装一个版本管理器.
+
+安装nvm需要打开命令行窗口，运行下面的命令。（示例代码是v0.31.0）
 
 ```
   curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.0/install.sh | bash
 ```
-然后
-active nvm
+
+然后 active nvm
+
 ```  
   source ~/.nvm/nvm.sh
 
 ```
+
+更多文档 [GitHub](https://github.com/creationix/nvm/blob/master/README.markdown)
 
 ## Let's say "Hello world"
 
