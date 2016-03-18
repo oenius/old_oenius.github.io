@@ -59,7 +59,7 @@ Node.js is built against modern versions of V8.
 * Object.assign
 * Spread operator [2]
 
-所以进入Node.js之前， 有必要了解ES6的基本特性。
+所以进入Node.js之前， 有必要了解ES6的基本特性。  
 更多ES6教程 [ECMAScript 6简介](http://es6.ruanyifeng.com/#docs/intro)
 
 ## 安装NVM (Node version manager)
@@ -151,4 +151,4 @@ ctrl + c两次 退出REPL
 
 ***
 
-下一篇 － 看iOS开发玩 Node.js - 一,高效的永无止境
+下一篇 － 看iOS开发玩 Node.js - 一,高效率的永无止境
