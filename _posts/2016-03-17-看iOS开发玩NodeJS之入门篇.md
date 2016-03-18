@@ -5,6 +5,9 @@ excerpt: A brief use of Node.js. 帮助你开始Node.js之旅
 categories: tools
 ---
 
+@author 周宇 [Email](jou@oenius.com) [Weibo](http://weibo.com/monfur) or [Github](https://github.com/oenius)
+
+
 # 看iOS开发玩 Node.js - 零,一切的开始
 
 ## 预热 - Full Stack Developer
@@ -107,3 +110,6 @@ Server running at http://127.0.0.1:8081/
 在终端的交互解释器， 在帮助入门上有很大的帮助。使用上，和python, ruby,swift没有特别的地方。
 
 ctrl + c两次 退出REPL
+
+
+***
